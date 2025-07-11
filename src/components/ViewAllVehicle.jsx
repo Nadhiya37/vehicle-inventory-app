@@ -1,47 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { VehicleNavbar } from './VehicleNavbar';
 
 const ViewAllVehicle = () => {
-  const [vehicleData, changedVehicleData] = useState([
-    {
-      vehicleName: "Swift",
-      vehicleBrand: "Maruti Suzuki",
-      fuel: "Petrol",
-      regNo: "KL-63-M-7634",
-      manufactureDate: "2018-04-10",
-      price: "8,00,000",
-    },
-    {
-      vehicleName: "Innova",
-      vehicleBrand: "Toyota",
-      fuel: "Petrol",
-      regNo: "KL-63-H-1234",
-      manufactureDate: "2023-04-10",
-      price: "27,00,000",
-    },
-    {
-      vehicleName: "Fortuner",
-      vehicleBrand: "Toyota",
-      fuel: "Petrol",
-      regNo: "KL-07-H-6543",
-      manufactureDate: "2024-04-10",
-      price: "40,00,000",
-    },
-    {
-      vehicleName: "Creta",
-      vehicleBrand: "Hyundai",
-      fuel: "Petrol",
-      regNo: "KL-07-N-1234",
-      manufactureDate: "2020-04-10",
-      price: "14,00,000",
-    },
-  ]);
-
   return (
-    <div className="container mt-4">
+     <div>
+      <VehicleNavbar/>
+    <div className="container">
       <div className="row">
-        <div className="col-12">
+      <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
           <table className="table table-bordered table-striped">
-            <thead className="table-light">
+            <thead className="table-dark">
               <tr>
                 <th>Name</th>
                 <th>Brand</th>
@@ -52,22 +20,45 @@ const ViewAllVehicle = () => {
               </tr>
             </thead>
             <tbody>
-              {vehicleData.map(
-                (value, index) => (
-                <tr key={index}>
-                  <td>{value.vehicleName}</td>
-                  <td>{value.vehicleBrand}</td>
-                  <td>{value.fuel}</td>
-                  <td>{value.regNo}</td>
-                  <td>{value.manufactureDate}</td>
-                  <td>{value.price}</td>
-                </tr>
-              ))}
+              <tr>
+                <td>Swift</td>
+                <td>Maruti Suzuki</td>
+                <td>Petrol</td>
+                <td>KL-63-M-7634</td>
+                <td>2018-04-10</td>
+                <td>8,00,000</td>
+              </tr>
+              <tr>
+                <td>Innova</td>
+                <td>Toyota</td>
+                <td>Petrol</td>
+                <td>KL-63-H-1234</td>
+                <td>2023-04-10</td>
+                <td>27,00,000</td>
+              </tr>
+              <tr>
+                <td>Fortuner</td>
+                <td>Toyota</td>
+                <td>Petrol</td>
+                <td>KL-07-H-6543</td>
+                <td>2024-04-10</td>
+                <td>40,00,000</td>
+              </tr>
+              <tr>
+                <td>Creta</td>
+                <td>Hyundai</td>
+                <td>Petrol</td>
+                <td>KL-07-N-1234</td>
+                <td>2020-04-10</td>
+                <td>14,00,000</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 
