@@ -13,6 +13,7 @@ function App() {
      <Routes>
       <Route path="/" element={<AddVehicle/>}/>
       <Route path="/search" element={<SearchVehicle/>}/>
+      <Route path="/delete" element={<DeleteVehicle/>}/>
       <Route path="/view" element={<ViewAllVehicle/>}/>
      </Routes>
      </BrowserRouter>
